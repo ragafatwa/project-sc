@@ -210,7 +210,16 @@ body {
         padding-top: 70px;
     }
     #profil {
-        margin: 0;
+        margin: -10px;
+    }
+    #deskripsi p {
+        font-size: smaller;
+    }
+    #deskripsi2 p {
+        font-size: smaller;
+    }
+    #deskripsi2 li {
+        font-size: smaller;
     }
 }
 
