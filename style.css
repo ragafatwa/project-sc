@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0351c7;
+}
+.navbar {
+    height: 60px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(18, 18, 18);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+.nav-item:not(:nth-last-child(1)) {
+    margin-right: 20px;
+}
+.dropdown-menu {    
+    padding: 0;
+    border-radius: 0;
+}
+.dropdown-item:hover {
+    color: #0d6efd;
+    background-color: #fff;
+}
+/* Ham menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: -6px;
+    top: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-toggle span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+.menu-toggle span:nth-child(3){
+    width: 25px;
+}
+/* Ham Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px,0px);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+.toggle-anim1 {
+    transform: rotate(0) translate(0px,0px);
+}
+.toggle-anim2 {
+    transform: rotate(0) translate(0px,0px);
+}
+.toggle-anim3 {
+    transform: scale(1);
+    opacity: 1;
+}
+#jumbotron {
+    margin-top: 60px;
+    padding-top: 170px;
+    height: 400px;
+}
+#jumbotron h1 {
+    font-weight: bold;
+}
+#jumbotron p {
+    font-size: 18px;
+}
+#jumbotron .btn {
+    border-radius: 20px;
+}
+#profil {
+    height: 500px;
+}
+/* Footer */
+.footer {
+    margin-top: -130px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #0d6efd;
+}
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+.footer ul li {
+    margin-top: 5px;
+}
+.footer ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.footer p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+.footer h4 {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+}
+.footer img {
+    width: 300px;
+}
+.dropdown-footer .dropdown-item {
+    color: #0d6efd;
+}
+.dropdown-footer .dropdown-item:hover {
+    
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .navbar-brand {
+        margin-left: -15px;
+    }
+    .dropdown-menu {
+        border: 0;        
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .navbar-nav {
+        position: absolute;
+        right: 0;
+        top: 55px;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 0;
+        box-sizing: border-box;
+        transform: translateX(-100%);
+        transition: all .5s;
+        list-style: none;
+        display: flex;
+        /* border-top: solid 1px grey; */
+    }
+    .nav-item {
+        padding-left: 3rem;
+        /* border-bottom: solid 1px grey; */
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    nav ul li{
+        width: 100%;
+        transition: all .3s;
+    }
+    nav ul li:hover{
+        /* background-color: #ccc; */
+    }
+    #jumbotron {
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #jumbotron {
+        padding-top: 70px;
+        text-align: center;
+    }
+    .footer {
+        margin: 0;
+    }
+    .footer img {
+        width: 15rem;
+    }
+    .footer h4 {
+        font-size: 18px;
+    }
+    .footer ul li a {
+        font-size: 14px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+}
